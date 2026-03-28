@@ -1,7 +1,7 @@
-# justbook
+# openslot
 
 > **Open-source scheduling that just works. No account. No paywall. No subscription.**
-> Set your availability. Share your link. Let people book time with you — with automatic Google Meet, email reminders, and rescheduling built in.
+> Set your availability. Share your link. Let people book time with you -- with automatic Google Meet, email reminders, and rescheduling built in.
 
 [Live Demo →](https://mrawal.com/book)
 
@@ -11,7 +11,7 @@
 
 You share a link. Someone picks a time. You both get a calendar invite with a Google Meet link, a confirmation email, and automatic reminders before the meeting.
 
-If they need to reschedule or cancel, they can do that too — no account required, no back-and-forth emails.
+If they need to reschedule or cancel, they can do that too -- no account required, no back-and-forth emails.
 
 That's it.
 
@@ -21,7 +21,7 @@ That's it.
 
 Calendly's free tier locks the features people actually use behind a $20/month paywall.
 
-| Feature | Calendly Free | Calendly Standard ($20/mo) | justbook |
+| Feature | Calendly Free | Calendly Standard ($20/mo) | openslot |
 |---|---|---|---|
 | Google Calendar sync | ✅ | ✅ | ✅ |
 | Google Meet auto-link | ❌ | ✅ | ✅ |
@@ -40,7 +40,7 @@ Calendly's free tier locks the features people actually use behind a $20/month p
 ## Everything Included
 
 **Booking**
-- Two meeting types — 30-minute deep dive and 15-minute quick chat
+- Two meeting types -- 30-minute deep dive and 15-minute quick chat
 - Smart slot generation with buffer time and conflict detection
 - Blocks disposable email addresses at input
 
@@ -52,12 +52,12 @@ Calendly's free tier locks the features people actually use behind a $20/month p
 **Emails**
 - Confirmation email sent immediately on booking
 - Reminder emails 24 hours and 1 hour before the meeting
-- Cancellation email if the meeting is cancelled — reminders auto-cancelled too
+- Cancellation email if the meeting is cancelled -- reminders auto-cancelled too
 
 **Rescheduling & Cancellation**
 - Every confirmation email includes a secure manage link
 - Guests reschedule or cancel without creating an account
-- Links are HMAC-signed — tamper-proof, no auth system needed
+- Links are HMAC-signed -- tamper-proof, no auth system needed
 
 **Reliability**
 - 62 tests covering slot generation, validation, reminders, and availability
@@ -104,8 +104,8 @@ Guest clicks manage link → Verified via HMAC token
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/yourusername/justbook.git
-cd justbook
+git clone https://github.com/yourusername/openslot.git
+cd openslot
 npm install
 ```
 
