@@ -1,39 +1,16 @@
 # openslot
 
-> **Open-source scheduling that just works. No account. No paywall. No subscription.**
-> Set your availability. Share your link. Let people book time with you -- with automatic Google Meet, email reminders, and rescheduling built in.
+Self-hosted booking page for Next.js: guests pick a time, get a Google Calendar invite with a Meet link, a confirmation email and reminders, and can reschedule or cancel from a signed link without an account.
 
-[Live Demo →](https://mrawal.com/book)
+Extracted from the booking page at [mrawal.com/book](https://mrawal.com/book). The live version has moved on since (bookings in Postgres, an admin panel), so it no longer matches this code line for line.
 
----
-
-## What It Does
-
-You share a link. Someone picks a time. You both get a calendar invite with a Google Meet link, a confirmation email, and automatic reminders before the meeting.
-
-If they need to reschedule or cancel, they can do that too -- no account required, no back-and-forth emails.
-
-That's it.
+![The booking page on mrawal.com](assets/book.png)
 
 ---
 
-## Why Not Just Use Calendly?
+## Compared with Calendly
 
-Calendly's free tier locks the features people actually use behind a $20/month paywall.
-
-| Feature | Calendly Free | Calendly Standard ($20/mo) | openslot |
-|---|---|---|---|
-| Google Calendar sync | ✅ | ✅ | ✅ |
-| Google Meet auto-link | ❌ | ✅ | ✅ |
-| Email confirmations | ✅ | ✅ | ✅ |
-| 24h + 1h reminders | ❌ | ✅ | ✅ |
-| Rescheduling flow | ❌ | ✅ | ✅ |
-| Cancellation flow | ❌ | ✅ | ✅ |
-| ICS calendar attachment | ❌ | ✅ | ✅ |
-| Disposable email blocking | ❌ | ❌ | ✅ |
-| No-login manage links | ❌ | ❌ | ✅ |
-| You own your data | ❌ | ❌ | ✅ |
-| Monthly cost | $0 | $20 | **$0 forever** |
+Calendly's free plan allows one event type and one calendar connection, and does not include automated meeting reminders. Paid plans are listed from $10 per seat per month ([calendly.com/pricing](https://calendly.com/pricing), checked October 2026). openslot has two meeting types, sends 24-hour and 1-hour reminders, and costs what your hosting and Resend usage cost. The trade-off: you run it, and you set up the Google and Resend accounts yourself.
 
 ---
 
@@ -104,7 +81,7 @@ Guest clicks manage link → Verified via HMAC token
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/yourusername/openslot.git
+git clone https://github.com/manishrawal95/openslot.git
 cd openslot
 npm install
 ```
@@ -131,6 +108,8 @@ BOOKING_ADMIN_EMAIL=you@example.com
 BOOKING_SIGNING_SECRET=your-random-hex-string
 NEXT_PUBLIC_BOOKING_TIMEZONE=America/New_York
 ```
+
+The pages use Tailwind CSS classes, but the repo ships no Tailwind config or root layout. Add Tailwind to the app (or drop these files into an existing Next.js app that has it) before the pages look right.
 
 ### 3. Run
 
